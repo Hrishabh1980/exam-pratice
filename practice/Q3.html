@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="password">password</label>
+        <input type="password" id="password" oninput="checkPassword()">
+        <p id="message"></p>
+    </div>
+    <script>
+        function checkPassword(){
+            const passwordInput= document.getElementById('password');
+            const messageBox= document.getElementById('message');
+            messageBox.innerHTML="";
+            if(passwordInput.value.length<6){
+                messageBox.innerHTML="password is weak";
+                messageBox.style.color="red";
+            }
+            else if(passwordInput.value.length>=6 && passwordInput.value.length<10){
+                messageBox.innerHTML="password is moderate";
+                messageBox.style.color="orange";
+            }
+            else{
+                messageBox.innerHTML="password is strong";
+                messageBox.style.color="green";
+            }
+        }
+       
+    </script>
+    
+</body>
+</html>
