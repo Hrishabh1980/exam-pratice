@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation (No JS)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* --- MAGIC CSS LOGIC --- */
+        
+        /* 1. By default, hide the Success Message */
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* 2. By default, show the Requirements List */
+        .requirements {
+            font-size: 13px;
+            color: #d9534f; /* Red color */
+            padding-left: 20px;
+        }
+
+        /* 3. When the input is VALID (matches Regex): */
+        input:valid ~ .success-message {
+            display: block; /* Show success */
+        }
+        
+        input:valid ~ .requirements {
+            display: none; /* Hide requirements */
+        }
+
+        /* Optional: Visual cue on the input box itself */
+        input:invalid {
+            border-color: #d9534f;
+        }
+        input:valid {
+            border-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Password Check</h3>
+        
+        <form>
+            <input 
+                type="password" 
+                id="password" 
+                placeholder="Type password..." 
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" 
+                required
+            >
+
+            <div class="success-message">✔ Password is Strong!</div>
+
+            <ul class="requirements">
+                <li>Min 8 characters</li>
+                <li>At least 1 Uppercase</li>
+                <li>At least 1 Lowercase</li>
+                <li>At least 1 Number</li>
+                <li>At least 1 Special Char</li>
+            </ul>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .body{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            border: 1px solid black;
+            height: 500px;
+            font-family: Arial, sans-serif;
+               background-color: #f4f4f4;
+           
+        }
+        aside{
+           
+            padding: 20px;
+           background-color: white;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        aside h3{
+            text-align: center;
+            color: #333;
+        }
+        aside ul{
+            list-style-type: none;
+            padding: 0;
+            
+        }
+        li{
+            padding: 10px;
+          
+            background-color: rgb(152, 201, 207);
+            margin: 10px;
+            border-radius: 10px;
+        }
+        main{
+          background-color: white;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        header h2{
+            color: #333;
+        }
+        header p{
+            color: #666;
+        }
+        section{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card{
+            background-color: rgb(152, 201, 207);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;    
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <aside>
+            <h3>
+                Menu
+            </h3>
+            <ul>
+                
+                <li> Dashboard</li>
+                <li> Student</li>
+                <li>Coures</li>
+                <li>Result</li> 
+                <li>Settings</li>
+            </ul>
+        </aside>
+        <main>
+            <header>
+                <h2> Welcome</h2>
+                <p>
+                    This is layout is made of CSS Grid
+                </p>
+            </header>
+            <section>
+                <div class="card">Total Student</div>
+                <div class="card">Total course</div>
+                <div class="card">Total Revenue</div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

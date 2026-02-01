@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            background-color: #f9f9f9;
+        }
+
+        /* 1. The Google Logo */
+        .logo {
+            font-family: 'Times New Roman', Times, serif; /* Matches the serif font in image */
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        /* 2. The Search Bar Container */
+        .search-container {
+            position: relative; /* Needed to position the dropdown below it */
+            width: 400px;
+        }
+
+        .search-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid #333;
+            background: white;
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+      
+        
+
+        /* 3. The Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 45px; /* Pushes it down below the search bar */
+            left: 50px; /* Indents it slightly like the image */
+            background-color: #222; /* Dark background */
+            color: white;
+           
+        }
+
+        /* The little triangle pointing up */
+        .dropdown::before {
+            content: "";
+            position: absolute;
+            top: -10px; /* Moves it above the box */
+            left: 20px;
+            border-width: 0 10px 10px 10px; /* Creates a triangle */
+            border-style: solid;
+            border-color: transparent transparent #222 transparent;
+        }
+
+        /* The list items */
+        .dropdown ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown li {
+            padding: 8px 20px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">Google</div>
+
+    <div class="search-container">
+        
+        <div class="search-box">
+            <input type="text">
+            <span class="down-arrow">▼</span>
+        </div>
+
+        <div class="dropdown">
+            <ul>
+                <li>HTML Examples</li>
+                <li>CSS Examples</li>
+                <li>Javascript Examples</li>
+                <li>HTML Projects</li>
+                <li>CSS Projects</li>
+                <li>JavaScript Projects</li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>
