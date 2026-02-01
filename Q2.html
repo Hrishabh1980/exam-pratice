@@ -5,83 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        nav{
-           display: flex;
-           justify-content: space-between;
-              align-items: center;
-              padding: 10px 20px;
-                border: 1px solid black;
-                
-            }
-            .logo{
-                font-size: 24px;
-                font-weight: bold;
-                color: blue;
-            }
-            
-            .menu ul{
-                list-style: none;
-                display: flex;
-              padding: 0px;
-                gap: 20px;
-               
-            }
-            .icons{
-                display: flex;
-                gap: 20px;
-            }
-            .icon1, .icon2{
-                position: relative;
-                border: 1px solid black;
-                padding: 10px;
-                border-radius: 5px;
-                background-color: lightgray;
-            }
-            .badge{
-                position: absolute;
-                top: -5px;
-                right: -5px;
-                background-color: red;
-                color: white;
-                border-radius: 50%;
-                width: 10px;
-                height: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 12px;
-            }
-
-            
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,td{
+            padding: 5px;
+            text-align: center;
+           
+        
+          
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <span> MynavBar</span>
-        </div>
-        <div class="menu">
-            <ul>
-                <li>home</li>
-                <li>about</li>
-                <li>services</li>
-                <li>contact</li>
-            </ul>
-        </div>
-        <div class="icons">
-            <div class="icon1">
-            <span></span>
-            <div class="badge">5</div>
-            </div>
-            <div class="icon2">
-            <span></span>
-            <div class="badge">2</div>
-            </div>
+    <table border="1" >
+       <thead>
+        <tr>
+            <th> 9:00AM-10:00AM </th>
+            <th> 10:00AM-11:00AM</th>
+            <th> 11:00AM-12:00PM </th>
+            <th>12:00AM-1:00PM</th>   
+            <TH>1:00PM-2:00PM</TH>
+            <TH>2:00PM-3:00PM</TH>
+            <TH>3:00PM-4:00PM</TH>
             
-            
+        </tr>
+        
+       </thead>
+       <tbody>
+        <tr>
+            <th>Monday</th>
+            <td>math</td>
+            <td>physic</td>
+            <td rowspan="6"> lunch </td>
+            <td>english</td>
+            <td>hindi</td6>
+            <td>chemestry</td>
+         
+        </tr>
+        <tr>
+            <th>Tuesday</th>
+            <td>math</td>
+            <td>physic</td>
+ 
+            <td>english</td>
+            <td>hindi</td>
+            <td>chemestry</td>
 
-        </div>
-    </nav>
+        </tr>
+        <tr>
+            <th>wednesday</th>
+            <td> maths</td>
+            <td> physcic</td>
+           
+            <td>english</td>
+            <td>hindi</td>
+            <td>chemestry</td>
+            
+        </tr>
+        <tr>
+            <th>thursday</th>
+            <td>maths</td>
+            <td>physic</td>
+           
+            <td>english</td>
+            <td>hindi</td>
+            <td>chemestry</td>
+            
+        </tr>
+        <tr>
+            <th>friday</th>
+            <td>maths</td>
+            <td>physic</td>
+          
+            <td>english</td>
+            <td>hindi</td>
+            <td>chemestry</td>
+            
+        </tr>
+        <tr>
+            <th>friday</th>
+            <td>maths</td>
+            <td>physic</td>
+        
+            <td>english</td>
+            <td>hindi</td>
+            <td>chemestry</td>
+            
+        </tr>
+       </tbody>
+
+    </table>
     
 </body>
 </html>
