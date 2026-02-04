@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="username"> Username:</label>
+        <input type="text" id="username" placeholder="Username"><br>
+
+        <label for="password" > password:</label>
+        <input type="passowrd" id="password" placeholder="password">
+        <br>
+
+        <button  type="button" onclick="check()"; > submit</button>
+        <p id="message"></p>
+    </form>
+    <script>
+        function check(){
+            const username = document.getElementById('username');
+            const password= document.getElementById('password');
+            const messageBox=document.getElementById('message'); 
+            messageBox.innerHTML="";
+            if(username.value==="admin" && password.value==="1234"){
+                messageBox.innerHTML="Login succesfully";
+                messageBox.style.color="green"
+            }
+            else{
+                messageBox.innerHTML="invaldi user";
+                messageBox.style.color="red";
+            }
+        }
+    </script>
+    
+</body>
+</html>
